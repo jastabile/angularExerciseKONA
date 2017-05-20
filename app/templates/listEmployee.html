@@ -3,7 +3,34 @@
 
 <div class="scrollable">
     <div class="scrollable-content">
-        <!-- Add the cards here -->
+    	<div ng-repeat="empleado in empleados | filter: filter.value">
+	    	<div ng-cloak="" class="carddemoBasicUsage" ng-app="MyApp">
+			  <md-content class="md-padding" layout-xs="column" layout="row">
+			    <div flex-xs="" flex-gt-xs="50" layout="column">
+			      <md-card md-theme-watch="">
+			        <md-card-title>
+			          <md-card-title-text>
+			            <span class="md-headline">{{empleado.first + ' ' + empleado.last}}</span>
+			            <span class="md-subhead">{{empleado.email}}</span>
+			            <span class="md-subhead">{{empleado.address}}</span>
+			            <span class="md-subhead" style='position:absolute; bottom:25px;'>Registrado:{{empleado.created}}</span>
+			          </md-card-title-text>
+			          <md-card-title-media>
+			            <div class="md-media-lg card-media"></div>
+			          </md-card-title-media>
+			        </md-card-title>
+			      </md-card>
+		        </div>
+	          </md-content>
+	        </div>
+        </div>
     </div>
 </div>
+
+
+
+
+
+
+
 
